@@ -2,193 +2,165 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f8e8d9">
-<title>For Suppu — A little birthday story</title>
+<meta name="theme-color" content="#f7e8df">
+<title>For Suppu ♡</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f8ecdf;--ink:#443443;--blue:#7fa8ef;--pink:#e9a9b5;--coral:#e88a70;--yellow:#f3d28c;--lav:#b8abd8;--green:#9fb89d;--serif:'Playfair Display',Georgia,serif;--sans:'Manrope',sans-serif;--mono:'DM Mono',monospace}
+:root{--paper:#f7e8df;--ink:#503d50;--pink:#e8a8b9;--blue:#a8bfeb;--coral:#edaa8f;--yellow:#f2d596;--lav:#c4b7e1;--serif:'Playfair Display',Georgia,serif;--sans:'Manrope',sans-serif;--mono:'DM Mono',monospace}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:var(--sans)}button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.33'/%3E%3C/svg%3E")}
-#book{position:relative;width:100%;height:100%;isolation:isolate}
-.page{position:absolute;inset:0;min-height:100%;padding:max(72px,env(safe-area-inset-top)) 22px max(88px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:center;overflow-y:auto;overflow-x:hidden;visibility:hidden;opacity:0;pointer-events:none;transform:translateX(9%) rotate(.8deg) scale(.985);transition:opacity .42s ease,transform .72s cubic-bezier(.2,.8,.2,1),visibility .72s;z-index:1}
+#book{position:relative;width:100%;height:100%;isolation:isolate;background:radial-gradient(ellipse at 10% 9%,#c4d6f5 0,transparent 33%),radial-gradient(ellipse at 92% 92%,#efb9b0 0,transparent 34%),#f7e8df}
+#book:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:25;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
+.page{position:absolute;inset:0;min-height:100%;padding:max(68px,env(safe-area-inset-top)) 21px max(88px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:center;overflow-y:auto;overflow-x:hidden;visibility:hidden;opacity:0;pointer-events:none;transform:translateX(11%) rotate(.7deg) scale(.99);transition:opacity .38s ease,transform .68s cubic-bezier(.2,.78,.2,1),visibility .68s;z-index:1}
 .page.active{visibility:visible;opacity:1;pointer-events:auto;transform:translateX(0) rotate(0) scale(1);z-index:3}
-.page.leaving{visibility:visible;opacity:0;pointer-events:none;transform:translateX(-9%) rotate(-.8deg) scale(.985);z-index:2}
-.page.prev-enter{transform:translateX(-9%) rotate(-.8deg) scale(.985)}
-.page:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(ellipse at 10% 8%,#fff9 0,transparent 29%),radial-gradient(ellipse at 92% 92%,#fff8 0,transparent 32%);z-index:0}
-.content{position:relative;z-index:2;width:min(780px,100%);margin:auto;text-align:center}
-.smallcap{font:9px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#8d6c7e}
-h1,h2,h3,p{margin-top:0}
-h1{font:500 clamp(3.1rem,12vw,7.2rem)/.9 var(--serif);letter-spacing:-.065em;margin:14px 0 16px;color:#50394d}
-h1 em,h2 em{color:#d87580;font-weight:500}
-h2{font:500 clamp(2.3rem,8vw,5.2rem)/.98 var(--serif);letter-spacing:-.055em;margin:10px 0 18px;color:#50394d}
-.lead{font-size:clamp(13px,3.4vw,17px);line-height:1.75;color:#6e5b68;max-width:570px;margin:0 auto 23px}
-.hand{font:italic clamp(20px,5vw,29px) var(--serif);color:#a65d76}
-.btn{border:1px solid #684c6250;background:#62485f;color:#fff8ee;padding:14px 21px;border-radius:999px;font:700 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 8px 22px #65475b20;transition:.25s}
-.btn:active{transform:scale(.97)}.btn.outline{background:#ffffff60;color:#5a4657;box-shadow:none}
-.topbar{position:fixed;top:max(12px,env(safe-area-inset-top));left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:0 17px;pointer-events:none}
-.brand{font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#715c70;background:#fff8e5a8;padding:9px 11px;border-radius:99px;backdrop-filter:blur(8px)}
-.music{pointer-events:auto;border:1px solid #765d713b;background:#fff8e5e8;color:#5d455d;border-radius:99px;padding:9px 12px;font:9px var(--mono);letter-spacing:.1em;box-shadow:0 4px 15px #674f5b12}
-.bottom{position:fixed;left:0;right:0;bottom:max(12px,env(safe-area-inset-bottom));z-index:22;display:flex;justify-content:space-between;align-items:center;padding:0 18px;pointer-events:none}
-.navbtn{pointer-events:auto;border:1px solid #7b607044;background:#fff8e9e8;color:#654c61;border-radius:99px;padding:12px 15px;font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(8px);min-width:92px}
-.navbtn.primary{background:#654b61;color:#fff7eb;border-color:#654b61}
-.counter{font:9px var(--mono);letter-spacing:.12em;color:#826b7b;background:#fff8e8ad;border-radius:99px;padding:9px 12px}
-.dots{display:flex;gap:5px}.dots i{width:5px;height:5px;border-radius:50%;background:#9d8290;opacity:.35}.dots i.on{opacity:1;background:#6d5168;width:17px;border-radius:10px}
-#p1{background:radial-gradient(ellipse at 50% 8%,#c5dcff 0,#dce5f6 24%,#f7e9dc 67%);text-align:center}
-#p1 .content{max-width:510px}
-.photo-frame{width:min(73vw,330px);margin:15px auto 22px;padding:10px 10px 28px;background:#fff9e9;box-shadow:0 18px 45px #5b465335;transform:rotate(-2.2deg);position:relative;border-radius:3px}
-.photo-frame:before{content:"";position:absolute;inset:-7px 8px 8px -7px;border:1px solid #fff8d9b5;transform:rotate(1.5deg);pointer-events:none}
-.photo-frame img{display:block;width:100%;height:min(47vh,430px);object-fit:cover;object-position:center 55%;filter:saturate(.94) contrast(.98);border-radius:1px}
-.photo-frame .scribble{position:absolute;bottom:7px;left:0;right:0;font:italic 13px var(--serif);color:#80667a}
-.paint-swash{position:absolute;pointer-events:none;filter:blur(.2px);opacity:.68}
-.swash-a{width:190px;height:105px;left:-45px;top:13%;background:#efb0b7;border-radius:62% 38% 60% 40%;transform:rotate(-24deg);filter:blur(14px)}
-.swash-b{width:190px;height:130px;right:-60px;bottom:11%;background:#a9bdea;border-radius:48% 52% 40% 60%;transform:rotate(31deg);filter:blur(16px)}
-#p2{background:radial-gradient(ellipse at 12% 18%,#b4c8f1 0,transparent 36%),radial-gradient(ellipse at 85% 90%,#edb7b0 0,transparent 35%),#f8e9d7}
-.paper-card{position:relative;margin:16px auto 0;max-width:520px;text-align:left;background:#fff8e9d9;padding:clamp(23px,6vw,40px);box-shadow:0 15px 38px #76596d17;transform:rotate(.6deg);border-radius:3px}
-.paper-card:before{content:"";position:absolute;inset:-6px 7px 7px -5px;border:1px solid #fff9df;transform:rotate(-1deg);z-index:-1}
-.paper-card p{font:italic clamp(18px,4.6vw,25px)/1.6 var(--serif);color:#654e61;margin:0}
-#p3{background:radial-gradient(ellipse at 80% 15%,#e7b1ba 0,transparent 35%),radial-gradient(ellipse at 8% 90%,#b8c7ed 0,transparent 33%),#f8eadd}
-.wish-list{display:grid;grid-template-columns:1fr;gap:10px;max-width:490px;margin:24px auto 0;text-align:left}
-.wish{display:flex;align-items:center;gap:14px;background:#fff8e7c9;border:1px solid #fff9df;padding:13px 15px;box-shadow:0 7px 20px #7a5c6510;transform:rotate(var(--r));border-radius:3px}
-.wish .ico{font-size:25px;width:38px;text-align:center}.wish b{display:block;font:italic 19px var(--serif);color:#684d64}.wish span:last-child{font-size:11px;color:#846d7c;line-height:1.4}
-#p4{background:radial-gradient(ellipse at 10% 15%,#f1c4a2 0,transparent 32%),radial-gradient(ellipse at 89% 90%,#b9b5e4 0,transparent 39%),#dce6ef}
-.memory-frame{width:min(83vw,390px);margin:15px auto 13px;background:#fff9eb;padding:11px 11px 42px;box-shadow:0 18px 44px #42516b35;transform:rotate(1.6deg);position:relative}
-.memory-frame:before{content:"";position:absolute;inset:-5px 8px 8px -7px;border:1px solid #fffce9;transform:rotate(-2deg);z-index:-1}
-.memory-frame img{width:100%;height:min(54vh,470px);object-fit:cover;object-position:center 54%;display:block}
-.memory-frame .caption{position:absolute;bottom:11px;left:0;right:0;font:italic 15px var(--serif);color:#816378}
-#p5{background:radial-gradient(ellipse at 85% 20%,#b9c6e7 0,transparent 37%),radial-gradient(ellipse at 8% 90%,#efb3ae 0,transparent 35%),#f7eadb}
-.envelope{width:min(80vw,390px);height:240px;margin:32px auto 8px;position:relative;cursor:pointer;perspective:800px}
-.env-back{position:absolute;inset:32px 0 0;background:#d99baa;box-shadow:0 20px 40px #6b506626}
-.env-flap{position:absolute;inset:32px 0 0;background:#f0c3c6;clip-path:polygon(0 0,50% 58%,100% 0);transform-origin:top;transition:transform .8s ease;z-index:3}
-.env-front{position:absolute;inset:32px 0 0;background:#e6aeb9;clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);z-index:4}
-.seal{position:absolute;z-index:5;top:112px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#a65d78;color:#fff1df;font:22px var(--serif);box-shadow:0 4px 15px #704a5b45;transition:.3s}
-.letter{position:absolute;left:5%;right:5%;bottom:20px;height:190px;padding:18px;background:#fff8e9;color:#654c61;text-align:left;font:italic 13px/1.55 var(--serif);box-shadow:0 5px 20px #60495b25;transform:translateY(90px);transition:transform .8s ease;z-index:2;overflow:auto}
-.envelope.open .letter{transform:translateY(-100px)}.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}.envelope.open .seal{opacity:0}
-.hint{font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#8e7180}
-#p6{background:radial-gradient(ellipse at 50% 15%,#b9c9ef 0,transparent 38%),radial-gradient(ellipse at 12% 85%,#efb1b5 0,transparent 37%),radial-gradient(ellipse at 90% 80%,#f4d18d 0,transparent 35%),#f8e9dc}
-#p6 h1{font-size:clamp(3.5rem,14vw,8rem)}
-.burst-heart{font-size:55px;color:#d87986;display:block;animation:thump 1.6s ease-in-out infinite}
-@keyframes thump{0%,100%{transform:scale(1)}20%{transform:scale(1.16)}40%{transform:scale(1)}60%{transform:scale(1.08)}}
-.confetti{position:fixed;top:-20px;z-index:40;pointer-events:none;animation:fall linear forwards}
-@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:0}}
-#p6 .signature{font:italic 22px var(--serif);color:#a45e77;margin-top:16px}
-@media(min-width:700px){.photo-frame{width:270px}.photo-frame img{height:320px}.memory-frame{width:310px}.memory-frame img{height:370px}.wish-list{grid-template-columns:1fr 1fr}.page{padding-left:7vw;padding-right:7vw}}
-@media(max-height:720px){.page{padding-top:60px;padding-bottom:74px}.photo-frame{width:min(60vw,245px);margin:7px auto 12px;padding:7px 7px 23px}.photo-frame img{height:34vh}.memory-frame{width:min(67vw,280px);padding:8px 8px 34px}.memory-frame img{height:38vh}.envelope{height:205px;margin:16px auto 4px}.letter{height:160px}.wish-list{gap:7px}.wish{padding:9px 12px}}
+.page.leaving{visibility:visible;opacity:0;pointer-events:none;transform:translateX(-10%) rotate(-.7deg) scale(.99);z-index:2}
+.content{position:relative;z-index:2;width:min(670px,100%);margin:auto;text-align:center}
+.cap{font:9px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#8d6c7e}
+h1,h2,p{margin-top:0}h1{font:500 clamp(3.2rem,12vw,7rem)/.92 var(--serif);letter-spacing:-.065em;margin:13px 0;color:#523e51}h1 em,h2 em{color:#cf7185;font-weight:500}
+h2{font:500 clamp(2.5rem,8vw,5.4rem)/.98 var(--serif);letter-spacing:-.055em;margin:12px 0 18px;color:#523e51}
+.line{font:italic clamp(19px,5vw,27px)/1.45 var(--serif);color:#765d70;max-width:520px;margin:0 auto 23px}
+.btn{border:1px solid #62495f;background:#62495f;color:#fff8ee;padding:14px 21px;border-radius:99px;font:700 9px var(--mono);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 8px 22px #65475b20;transition:.2s}
+.btn:active{transform:scale(.97)}.btn.light{background:#fff9ed;color:#604b60;border-color:#fff9ed;box-shadow:0 8px 22px #72556d15}
+.topbar{position:fixed;top:max(12px,env(safe-area-inset-top));left:0;right:0;z-index:18;display:flex;justify-content:space-between;align-items:center;padding:0 15px;pointer-events:none}
+.brand,.music{font:8px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#6f596c;background:#fff9edc9;border:1px solid #fffdf0a6;border-radius:99px;padding:9px 11px;backdrop-filter:blur(8px)}
+.music{pointer-events:auto;cursor:pointer}
+.bottom{position:fixed;left:0;right:0;bottom:max(11px,env(safe-area-inset-bottom));z-index:20;display:flex;justify-content:space-between;align-items:center;padding:0 14px;pointer-events:none}
+.nav{pointer-events:auto;min-width:86px;border:1px solid #765d7140;background:#fff9edeb;color:#654c61;border-radius:99px;padding:11px 13px;font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(8px)}
+.nav.primary{background:#654b61;color:#fff7eb;border-color:#654b61}
+.pagecount{background:#fff9edb8;border-radius:99px;padding:8px 11px;font:8px var(--mono);letter-spacing:.1em;color:#806a7b}
+.dots{display:inline-flex;gap:4px;margin-left:7px;vertical-align:middle}.dots i{width:5px;height:5px;border-radius:9px;background:#a68a9a;opacity:.4}.dots i.on{opacity:1;background:#6d5168;width:14px}
+#p1{background:radial-gradient(ellipse at 50% 0%,#c4d8ff 0,transparent 38%),radial-gradient(ellipse at 90% 95%,#f0b7b0 0,transparent 32%)}
+#p1 .content{max-width:520px}
+.photo-frame{width:min(70vw,290px);margin:14px auto 20px;padding:9px 9px 27px;background:#fff9eb;box-shadow:0 16px 42px #5b465335;transform:rotate(-2deg);position:relative}
+.photo-frame:before{content:"";position:absolute;inset:-6px 8px 8px -7px;border:1px solid #fff8e5;transform:rotate(1.8deg);z-index:-1}
+.photo-frame img{display:block;width:100%;height:min(37vh,350px);object-fit:cover;object-position:center 52%}
+.photo-caption{position:absolute;bottom:6px;left:0;right:0;font:italic 12px var(--serif);color:#856b7e}
+.soft-blob{position:absolute;border-radius:55% 45% 65% 35%;filter:blur(17px);opacity:.55;pointer-events:none}
+.b1{width:160px;height:110px;background:#e9a9b8;left:-65px;top:17%;transform:rotate(-23deg)}
+.b2{width:170px;height:120px;background:#a9c3f1;right:-75px;bottom:12%;transform:rotate(28deg)}
+#p2{background:radial-gradient(ellipse at 10% 12%,#ecc1bd 0,transparent 34%),radial-gradient(ellipse at 90% 90%,#b8c9ec 0,transparent 34%),#f7e9dc}
+.note-card{max-width:490px;margin:20px auto;padding:clamp(23px,6vw,36px);background:#fff9edcf;border:1px solid #fff8e8;box-shadow:0 14px 34px #75586a16;transform:rotate(.5deg)}
+.note-card p{font:italic clamp(21px,5.5vw,31px)/1.45 var(--serif);color:#654d64;margin:0}
+#p3{background:radial-gradient(ellipse at 90% 10%,#f0c49b 0,transparent 35%),radial-gradient(ellipse at 10% 90%,#b5c9ee 0,transparent 34%),#f7e7d8}
+.big-photo{width:min(80vw,350px);margin:13px auto 15px;padding:10px 10px 37px;background:#fff9eb;box-shadow:0 18px 42px #45516b30;transform:rotate(1.5deg);position:relative}
+.big-photo:before{content:"";position:absolute;inset:-6px 7px 7px -6px;border:1px solid #fffbed;transform:rotate(-1.6deg);z-index:-1}
+.big-photo img{display:block;width:100%;height:min(43vh,420px);object-fit:cover;object-position:center 52%}
+.big-photo .photo-caption{bottom:10px;font-size:14px}
+#p4{background:radial-gradient(ellipse at 8% 15%,#b7c9ef 0,transparent 35%),radial-gradient(ellipse at 90% 87%,#edb4ad 0,transparent 38%),#f6e7da}
+.wish-stack{display:flex;flex-direction:column;gap:10px;max-width:410px;margin:25px auto 0}
+.wish{display:flex;align-items:center;justify-content:center;gap:13px;background:#fff9ebc7;border:1px solid #fff9ec;padding:12px 16px;color:#684e64;box-shadow:0 5px 17px #7157690d;transform:rotate(var(--r))}
+.wish span:first-child{font-size:22px}.wish b{font:italic 21px var(--serif);font-weight:500}
+#p5{background:radial-gradient(ellipse at 8% 10%,#f0c6a8 0,transparent 33%),radial-gradient(ellipse at 90% 90%,#c2b4df 0,transparent 36%),#f8e9dc}
+.envelope{width:min(78vw,360px);height:218px;margin:28px auto 5px;position:relative;cursor:pointer}
+.env-back{position:absolute;inset:25px 0 0;background:#dfa4b2;box-shadow:0 19px 37px #6b506626}
+.env-flap{position:absolute;inset:25px 0 0;background:#f1c3c7;clip-path:polygon(0 0,50% 58%,100% 0);transform-origin:top;transition:transform .75s ease;z-index:3}
+.env-front{position:absolute;inset:25px 0 0;background:#e5acb8;clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);z-index:4}
+.seal{position:absolute;z-index:5;top:100px;left:50%;transform:translateX(-50%);width:47px;height:47px;border-radius:50%;display:grid;place-items:center;background:#a45c78;color:#fff1df;font:22px var(--serif);box-shadow:0 4px 15px #704a5b45;transition:.3s}
+.letter{position:absolute;left:5%;right:5%;bottom:15px;height:172px;padding:18px;background:#fff8e9;color:#654c61;text-align:left;font:italic 14px/1.57 var(--serif);box-shadow:0 5px 20px #60495b25;transform:translateY(85px);transition:transform .75s ease;z-index:2;overflow:auto}
+.envelope.open .letter{transform:translateY(-94px)}.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}.envelope.open .seal{opacity:0}
+.hint{font:8px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#8e7180}
+#p6{background:radial-gradient(ellipse at 50% 12%,#b9c9ef 0,transparent 39%),radial-gradient(ellipse at 10% 90%,#efb1b5 0,transparent 34%),radial-gradient(ellipse at 92% 85%,#f4d18d 0,transparent 34%),#f8e9dc}
+#p6 h1{font-size:clamp(3.5rem,13vw,7.8rem)}
+.heart{font-size:55px;color:#d87986;display:block;animation:thump 1.8s ease-in-out infinite;margin-bottom:10px}@keyframes thump{0%,100%{transform:scale(1)}20%{transform:scale(1.12)}40%{transform:scale(1)}60%{transform:scale(1.06)}}
+.share-wrap{margin-top:22px}.share-status{font:8px var(--mono);color:#856c7d;margin-top:9px;min-height:13px}
+@media(min-width:700px){.photo-frame{width:255px}.photo-frame img{height:305px}.big-photo{width:295px}.big-photo img{height:360px}.wish-stack{display:grid;grid-template-columns:1fr 1fr}.page{padding-left:7vw;padding-right:7vw}}
+@media(max-height:690px){.page{padding-top:58px;padding-bottom:77px}.photo-frame{width:min(55vw,220px);padding:7px 7px 22px;margin:5px auto 12px}.photo-frame img{height:29vh}.big-photo{width:min(60vw,250px);padding:7px 7px 31px;margin:4px auto 10px}.big-photo img{height:32vh}.note-card{padding:20px;margin:13px auto}.envelope{height:188px;margin:14px auto 0}.letter{height:156px}.wish-stack{gap:7px;margin-top:14px}.wish{padding:9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div id="book">
-<div class="topbar"><div class="brand">A LITTLE BIRTHDAY BOOK · FOR SUPPU</div><button class="music" id="musicBtn" onclick="toggleMusic()">♫ MUSIC OFF</button></div>
+<main id="book">
+<div class="topbar"><div class="brand">A LITTLE BIRTHDAY STORY · FOR SUPPU</div><button class="music" id="musicBtn" onclick="toggleMusic()">♫ MUSIC OFF</button></div>
 
 <section class="page active" id="p1">
- <span class="paint-swash swash-a"></span><span class="paint-swash swash-b"></span>
+ <span class="soft-blob b1"></span><span class="soft-blob b2"></span>
  <div class="content">
-  <div class="smallcap">A hand-painted little surprise · made with love</div>
-  <div class="photo-frame"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3GwsD7bA13q3c7Pa4cI6ETBiYIA/8007c3fd-7ac3-4160-8e04-88766c4598c3.jpg" alt="A favourite photo of us"><div class="scribble">one of my favourite people ♡</div></div>
-  <div class="hand">For my favourite artist,</div>
-  <h1>Happy birthday,<br><em>Suppu!</em></h1>
-  <p class="lead">I couldn't be there to make a scene in person… so I made you a little story instead. Ready?</p>
-  <button class="btn" onclick="nextPage(true)">Open your birthday book ↗</button>
+  <div class="cap">A little surprise, made only for you</div>
+  <div class="photo-frame"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3GwsD7bA13q3c7Pa4cI6ETBiYIA/8007c3fd-7ac3-4160-8e04-88766c4598c3.jpg" alt="A favourite picture together"><div class="photo-caption">my favourite view ♡</div></div>
+  <div class="cap">11 November · your day</div>
+  <h1>Happy birthday,<br><em>Suppu.</em></h1>
+  <p class="line">Kaash aaj tumhare paas hota.</p>
+  <button class="btn" onclick="beginStory()">Open your surprise ♫</button>
  </div>
 </section>
 
 <section class="page" id="p2">
  <div class="content">
-  <div class="smallcap">Page 02 · A small confession</div>
-  <h2>Distance is being<br><em>very rude.</em></h2>
-  <p class="lead">Because today, there are a few things I'd much rather be doing than staring at a screen.</p>
-  <div class="paper-card"><p>I'd be showing up with cake, pretending I don't want the biggest slice. I'd be annoying you until you laugh. And then I'd probably ask for one more hug… just to be sure.</p></div>
-  <p class="hand" style="margin:25px 0 0">Consider this a tiny preview of the real celebration. ♡</p>
+  <div class="cap">Page 02 · One little complaint</div>
+  <h2>Itni door<br><em>kyun ho?</em></h2>
+  <p class="line">Aaj tumhe hug karke wish karna tha. Bas.</p>
+  <div class="note-card"><p>Screen ke us paar nahi… tumhare paas hona tha. ❤️</p></div>
  </div>
 </section>
 
 <section class="page" id="p3">
  <div class="content">
-  <div class="smallcap">Page 03 · Things I wish for you</div>
-  <h2>A little more<br><em>of everything good.</em></h2>
-  <p class="lead">A birthday wish list, curated by someone who is completely biased.</p>
-  <div class="wish-list">
-   <div class="wish" style="--r:-.8deg"><span class="ico">🎨</span><span><b>Endless inspiration</b><span>May every idea find its colour.</span></span></div>
-   <div class="wish" style="--r:.7deg"><span class="ico">🌷</span><span><b>Soft little moments</b><span>Slow mornings and pretty days.</span></span></div>
-   <div class="wish" style="--r:.6deg"><span class="ico">✨</span><span><b>Big brave dreams</b><span>May you make things you once only imagined.</span></span></div>
-   <div class="wish" style="--r:-.6deg"><span class="ico">🍰</span><span><b>Unlimited cake</b><span>Calories are on birthday leave.</span></span></div>
-  </div>
+  <div class="cap">Page 03 · This day, this view</div>
+  <h2>Pahad khoobsurat the…</h2>
+  <div class="big-photo"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3GwsD7bA13q3c7Pa4cI6ETBiYIA/8007c3fd-7ac3-4160-8e04-88766c4598c3.jpg" alt="Our mountain day"><div class="photo-caption">more days like this, please ♡</div></div>
+  <p class="line">Par meri nazar tum par thi.</p>
  </div>
 </section>
 
 <section class="page" id="p4">
  <div class="content">
-  <div class="smallcap">Page 04 · A moment I am keeping</div>
-  <h2>My kind of<br><em>beautiful view.</em></h2>
-  <div class="memory-frame"><img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3GwsD7bA13q3c7Pa4cI6ETBiYIA/8007c3fd-7ac3-4160-8e04-88766c4598c3.jpg" alt="Our mountain-day photograph"><div class="caption">more days, more trails, more us ♡</div></div>
-  <p class="lead">The sky was lovely, the mountains were unreal… but you still managed to be my favourite part of the picture.</p>
+  <div class="cap">Page 04 · My wish for you</div>
+  <h2>Iss saal tumhe<br><em>sab mile.</em></h2>
+  <p class="line">Jo dil chahe. Jo sapne dekhe. Jo khushi deserve karti ho.</p>
+  <div class="wish-stack">
+   <div class="wish" style="--r:-.7deg"><span>🎨</span><b>Endless inspiration</b></div>
+   <div class="wish" style="--r:.6deg"><span>🌷</span><b>Little everyday joys</b></div>
+   <div class="wish" style="--r:.5deg"><span>✨</span><b>Big beautiful dreams</b></div>
+   <div class="wish" style="--r:-.5deg"><span>🍰</span><b>Unlimited cake</b></div>
+  </div>
  </div>
 </section>
 
 <section class="page" id="p5">
  <div class="content">
-  <div class="smallcap">Page 05 · Open when you need a hug</div>
-  <h2>A letter, from<br><em>your not-so-nearby person.</em></h2>
-  <p class="lead">Tap the envelope. It travelled all this way just to reach you.</p>
+  <div class="cap">Page 05 · Open when you miss me</div>
+  <h2>Ek chhota sa<br><em>letter.</em></h2>
+  <p class="line">Tap the envelope, birthday girl.</p>
   <div class="envelope" id="envelope" onclick="openLetter()">
    <div class="env-back"></div>
-   <div class="letter">My dearest Suppu,<br><br>Happy birthday, my favourite artist and my favourite human. I wish I could be beside you today — see your smile, hear your laugh, steal a bite of your cake and give you the longest hug.<br><br>I hope this year brings you beautiful ideas, kind people, brave beginnings and a hundred reasons to feel proud of yourself. Keep creating, keep dreaming, and keep being your wonderfully colourful self.<br><br>Distance gets tonight. It doesn't get to take away how loved you are. I'll make up for every missed hug.<br><br>I love you, birthday girl. ❤️<br><br>— Your favourite pagal</div>
+   <div class="letter">Suppu,<br><br>Kaash aaj tumhare saath hota. Tumhari smile dekhta, cake churaata, aur tumhe woh longest hug deta.<br><br>Door hoon, par tum mere dil ke sabse paas ho. Thank you for being you.<br><br>Happy birthday, meri favourite person. I love you. ❤️<br><br>— Harsh</div>
    <div class="env-flap"></div><div class="env-front"></div><div class="seal">S</div>
   </div>
-  <div class="hint" id="letterHint">TAP TO OPEN YOUR LETTER</div>
+  <div class="hint" id="letterHint">TAP TO OPEN</div>
  </div>
 </section>
 
 <section class="page" id="p6">
  <div class="content">
-  <span class="burst-heart">♡</span>
-  <div class="smallcap">The last page · but never the last hug</div>
-  <h1>Keep shining,<br><em>Suppu.</em></h1>
-  <p class="lead">May this year be colourful, surprising, a little ridiculous, full of art, full of laughter — and completely, wonderfully yours.</p>
-  <div class="hand">Happy birthday, Supriya. ❤️</div>
-  <div class="signature">All my love, always.</div>
-  <div style="margin-top:25px"><button class="btn" onclick="celebrate()">One last little surprise ✦</button></div>
+  <span class="heart">♡</span>
+  <div class="cap">The last page · all my love</div>
+  <h1>Happy birthday,<br><em>my Suppu.</em></h1>
+  <p class="line">I love you. Ab cake ki photo bhejo. I'm waiting. 😌</p>
+  <div class="share-wrap"><button class="btn light" onclick="copyLink()">Copy this little surprise's link</button><div class="share-status" id="shareStatus"></div></div>
  </div>
 </section>
 
-<div class="bottom"><button class="navbtn" id="backBtn" onclick="prevPage()">← BACK</button><div class="counter"><span id="counter">01 / 06</span> &nbsp; <span class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div><button class="navbtn primary" id="nextBtn" onclick="nextPage()">TURN PAGE →</button></div>
+<div class="bottom">
+ <button class="nav" id="backBtn" onclick="prevPage()">← BACK</button>
+ <div class="pagecount"><span id="counter">01 / 06</span><span class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div>
+ <button class="nav primary" id="nextBtn" onclick="nextPage()">NEXT →</button>
 </div>
-
+<audio id="bgMusic" preload="none" loop src="https://orangefreesounds.com/wp-content/uploads/2024/06/Chopin-nocturne-in-f-sharp.mp3"></audio>
+</main>
 <script>
-const pages=[...document.querySelectorAll('.page')];let current=0;let music=null;let musicOn=false;let letterOpen=false;
-const counter=document.getElementById('counter'),dots=[...document.querySelectorAll('#dots i')],backBtn=document.getElementById('backBtn'),nextBtn=document.getElementById('nextBtn');
-function syncNav(){counter.textContent=String(current+1).padStart(2,'0')+' / 06';dots.forEach((d,i)=>d.classList.toggle('on',i===current));backBtn.style.visibility=current===0?'hidden':'visible';nextBtn.textContent=current===pages.length-1?'START AGAIN ↺':'TURN PAGE →'}
-function goTo(n){if(n<0||n>=pages.length||n===current)return;const old=pages[current],next=pages[n];old.classList.remove('active');old.classList.add('leaving');next.classList.add('active');current=n;syncNav();setTimeout(()=>old.classList.remove('leaving'),750);if(current===5)confetti(34)}
-function nextPage(start){if(start)startMusic();if(current===pages.length-1){goTo(0);return}goTo(current+1)}
+const pages=[...document.querySelectorAll('.page')];let current=0,playing=false,letterOpen=false;
+const audio=document.getElementById('bgMusic'),musicBtn=document.getElementById('musicBtn');
+audio.volume=.24;
+function syncNav(){document.getElementById('counter').textContent=String(current+1).padStart(2,'0')+' / 06';document.querySelectorAll('#dots i').forEach((d,i)=>d.classList.toggle('on',i===current));document.getElementById('backBtn').style.visibility=current===0?'hidden':'visible';document.getElementById('nextBtn').textContent=current===5?'REPLAY ↺':'NEXT →'}
+function goTo(n){if(n<0||n>=pages.length||n===current)return;const old=pages[current],next=pages[n];old.classList.remove('active');old.classList.add('leaving');next.classList.add('active');current=n;syncNav();setTimeout(()=>old.classList.remove('leaving'),720)}
+function beginStory(){startMusic();goTo(1)}
+function nextPage(){if(current===0)startMusic();if(current===5){goTo(0);return}goTo(current+1)}
 function prevPage(){goTo(current-1)}
+function startMusic(){if(playing)return;audio.play().then(()=>{playing=true;musicBtn.textContent='♫ MUSIC ON · TAP TO PAUSE'}).catch(()=>{musicBtn.textContent='♫ TAP TO PLAY';document.getElementById('shareStatus').textContent='Tap the music button once to enable audio.'})}
+function toggleMusic(){if(playing){audio.pause();playing=false;musicBtn.textContent='♫ MUSIC OFF'}else startMusic()}
+function openLetter(){letterOpen=!letterOpen;document.getElementById('envelope').classList.toggle('open',letterOpen);document.getElementById('letterHint').textContent=letterOpen?'SENT WITH LOVE ♡':'TAP TO OPEN'}
+async function copyLink(){const url=window.location.href;const status=document.getElementById('shareStatus');try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url)}else{const field=document.createElement('textarea');field.value=url;field.style.position='fixed';field.style.opacity='0';document.body.appendChild(field);field.focus();field.select();const ok=document.execCommand('copy');field.remove();if(!ok)throw new Error('copy failed')}status.textContent='LINK COPIED ♡'}catch(e){status.textContent='Press and hold the address bar link to copy.';window.prompt('Copy this link:',url)}}
 syncNav();
-function openLetter(){letterOpen=!letterOpen;document.getElementById('envelope').classList.toggle('open',letterOpen);document.getElementById('letterHint').textContent=letterOpen?'DELIVERED WITH ALL MY LOVE ♡':'TAP TO OPEN YOUR LETTER'}
-function confetti(count){const chars=['✦','✿','♡','✧','❋'];const colors=['#e88a70','#e9a9b5','#8bacef','#f3d28c','#a9b99d','#b8abd8'];for(let i=0;i<count;i++){const el=document.createElement('span');el.className='confetti';el.textContent=chars[i%chars.length];el.style.left=(Math.random()*100)+'vw';el.style.color=colors[i%colors.length];el.style.fontSize=(12+Math.random()*21)+'px';el.style.animationDuration=(3+Math.random()*3)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),6500)}}
-function celebrate(){confetti(120);document.querySelector('#p6 .signature').textContent='A million kisses, one very long hug. 💗';}
-function toggleMusic(){if(musicOn){stopMusic();return}startMusic()}
-function startMusic(){
- if(musicOn)return;
- const AC=window.AudioContext||window.webkitAudioContext;if(!AC){document.getElementById('musicBtn').textContent='♫ AUDIO UNAVAILABLE';return}
- if(!music){const ctx=new AC();const master=ctx.createGain();master.gain.value=0.0001;const comp=ctx.createDynamicsCompressor();comp.threshold.value=-26;comp.knee.value=20;comp.ratio.value=3;comp.attack.value=.04;comp.release.value=.3;
- const delay=ctx.createDelay(1);delay.delayTime.value=.34;const fb=ctx.createGain();fb.gain.value=.18;const wet=ctx.createGain();wet.gain.value=.16;delay.connect(fb);fb.connect(delay);delay.connect(wet);wet.connect(comp);master.connect(comp);comp.connect(ctx.destination);
- const dry=ctx.createGain();dry.gain.value=.88;master.connect(dry);dry.connect(comp);
- music={ctx:ctx,master:master,delay:delay,dry:dry,timer:null,next:0,step:0,bar:0};
- }
- const ctx=music.ctx;ctx.resume();musicOn=true;music.master.gain.cancelScheduledValues(ctx.currentTime);music.master.gain.setTargetAtTime(.17,ctx.currentTime,.8);
- document.getElementById('musicBtn').textContent='♫ MUSIC ON · TAP TO PAUSE';
- const beat=60/74,stepDur=beat/2;
- const chords=[[53,57,60,64],[48,55,60,64],[50,57,60,65],[46,53,57,62]];
- const melody=[[65,69,72,76,72,69,72,74],[67,72,76,79,76,72,71,67],[65,69,72,77,76,72,69,65],[62,65,70,74,72,70,65,62]];
- function hz(m){return 440*Math.pow(2,(m-69)/12)}
- function padChord(notes,t,dur){notes.forEach((m,k)=>{const o=ctx.createOscillator(),g=ctx.createGain(),f=ctx.createBiquadFilter();o.type=k%2?'sine':'triangle';o.frequency.value=hz(m);o.detune.value=k%2?2:-2;f.type='lowpass';f.frequency.value=950;o.connect(f);f.connect(g);g.connect(music.master);g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(.012,t+1.0);g.gain.setValueAtTime(.010,t+dur-.7);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.start(t);o.stop(t+dur+.05)})}
- function bell(m,t){const o=ctx.createOscillator(),o2=ctx.createOscillator(),g=ctx.createGain(),lp=ctx.createBiquadFilter();o.type='triangle';o.frequency.value=hz(m);o2.type='sine';o2.frequency.value=hz(m)*2.01;o.connect(lp);o2.connect(lp);lp.type='lowpass';lp.frequency.value=3200;lp.connect(g);g.connect(music.master);g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(.031,t+.018);g.gain.exponentialRampToValueAtTime(.0001,t+1.05);o.start(t);o2.start(t);o.stop(t+1.1);o2.stop(t+1.1)}
- function bass(m,t){const o=ctx.createOscillator(),g=ctx.createGain(),lp=ctx.createBiquadFilter();o.type='sine';o.frequency.value=hz(m-12);lp.type='lowpass';lp.frequency.value=300;o.connect(lp);lp.connect(g);g.connect(music.master);g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(.025,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+.8);o.start(t);o.stop(t+.85)}
- music.next=ctx.currentTime+.12;music.step=0;music.bar=0;
- music.timer=setInterval(()=>{while(music.next<ctx.currentTime+.18){const t=music.next,bar=music.bar,step=music.step;if(step===0){padChord(chords[bar],t,beat*4);bass(chords[bar][0],t)}const m=melody[bar][step];if(step!==3&&step!==7)bell(m,t);else bell(m-12,t);if(step===2||step===6)bell(melody[bar][(step+1)%8],t+.13);music.next+=stepDur;music.step++;if(music.step>=8){music.step=0;music.bar=(music.bar+1)%4}}},35);
-}
-function stopMusic(){if(!music||!musicOn)return;musicOn=false;const ctx=music.ctx;music.master.gain.setTargetAtTime(.0001,ctx.currentTime,.35);clearInterval(music.timer);document.getElementById('musicBtn').textContent='♫ MUSIC OFF · TAP TO PLAY'}
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&musicOn)stopMusic()});
 </script>
 </body>
 </html>
