@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101629">
+<title>Suppuverse ✦ a little universe for Supriya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#101629;--cream:#fff1dd;--pink:#f4aabd;--lav:#b9b2ef;--gold:#f3d18b;--mint:#a8d3be;--serif:'Playfair Display',Georgia,serif;--sans:'Manrope',sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:var(--cream);font-family:var(--sans);overflow-x:hidden}button{font:inherit;cursor:pointer}
+#space{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 25%,#293654 0,#18223a 45%,#0d1425 100%)}#space:before{content:"";position:absolute;inset:0;background-image:radial-gradient(1px 1px at 8% 18%,#fff 99%,transparent),radial-gradient(1px 1px at 78% 12%,#f8d9b8 99%,transparent),radial-gradient(2px 2px at 45% 70%,#fff 99%,transparent),radial-gradient(1px 1px at 92% 81%,#fff 99%,transparent),radial-gradient(1px 1px at 24% 90%,#f5a9bb 99%,transparent);background-size:190px 170px,260px 220px,320px 280px,220px 190px,280px 230px;opacity:.7}
+#app{position:relative;z-index:1}.top{position:fixed;z-index:20;top:0;left:0;right:0;padding:16px 22px;display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:#c7c4dc;pointer-events:none}.top b{color:var(--pink);font-weight:400}
+section{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;padding:92px 22px;overflow:hidden}.inner{width:min(1050px,100%);margin:auto;position:relative;z-index:2;text-align:center}.eyebrow{font:10px var(--mono);letter-spacing:.19em;text-transform:uppercase;color:var(--pink);margin-bottom:20px}
+h1,h2,p{margin-top:0}h1{font:500 clamp(3.8rem,12vw,9rem)/.9 var(--serif);letter-spacing:-.07em;margin-bottom:22px}h1 em,h2 em{color:var(--pink);font-weight:500}h2{font:500 clamp(2.8rem,8vw,6.5rem)/.96 var(--serif);letter-spacing:-.055em;margin-bottom:18px}
+.lead{font-size:clamp(14px,2vw,18px);line-height:1.85;color:#d0d1e0;max-width:620px;margin:0 auto 28px}.micro{font:9px var(--mono);letter-spacing:.15em;color:#b8b6d0;text-transform:uppercase}
+.btn{border:1px solid #f5a9bb88;background:var(--pink);color:#172037;padding:14px 22px;font:700 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;transition:.25s;border-radius:2px;box-shadow:0 8px 30px #f5a9bb24}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px #f5a9bb44}.btn.ghost{background:transparent;color:var(--cream);box-shadow:none;border-color:#ffffff55}
+#intro{background:radial-gradient(ellipse at 50% 60%,#46507788,transparent 55%)}.intro-content{max-width:860px}
+.logo{width:min(54vw,340px);aspect-ratio:1;margin:0 auto 25px;position:relative;display:grid;place-items:center}.ring{position:absolute;inset:7%;border:1px solid #e9c7d977;border-radius:50%;transform:rotate(-25deg) scaleY(.4);animation:spin 16s linear infinite}.ring.r2{inset:16%;transform:rotate(38deg) scaleY(.5);border-color:#b8b4f099;animation-direction:reverse;animation-duration:23s}@keyframes spin{to{rotate:360deg}}
+.mini-planet{width:55%;aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 28% 24%,#fff0c7 0,#f4c0bd 18%,#a7a9d9 54%,#52638e 100%);box-shadow:inset -20px -24px 35px #17213c88,0 0 65px #e9b9dc66;animation:bob 5s ease-in-out infinite}.mini-planet:before{content:"";position:absolute;width:66%;height:22%;background:#8fbb9e;border-radius:60% 35% 50% 40%;left:14%;top:39%;transform:rotate(-23deg);box-shadow:45px 25px 0 -8px #7fae9b}.mini-planet:after{content:"";position:absolute;width:25%;height:15%;border-radius:50%;background:#fff2d9;right:18%;top:18%;filter:blur(1px)}
+@keyframes bob{50%{transform:translateY(-12px) rotate(5deg)}}.planet-tag{position:absolute;font:9px var(--mono);letter-spacing:.13em;color:#eac7dc}.tag1{top:8%;right:-5%}.tag2{bottom:11%;left:-7%}
+.scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font:9px var(--mono);letter-spacing:.17em;color:#aaaac6;white-space:nowrap}
+#world{background:radial-gradient(ellipse at 50% 60%,#46577b66,transparent 60%)}.world-stage{width:min(760px,100%);height:min(70vw,570px);min-height:370px;position:relative;margin:4px auto 10px;perspective:900px}
+.planet{position:absolute;width:53%;aspect-ratio:1;border-radius:50%;left:23.5%;top:21%;background:radial-gradient(circle at 34% 25%,#fff0d2 0 4%,#efc1c4 12%,#c6b6df 37%,#7796a6 72%,#38526c 100%);box-shadow:inset -35px -30px 55px #17203d99,0 0 85px #b6a5ed66;animation:planetFloat 8s ease-in-out infinite;cursor:pointer}.planet:before{content:"";position:absolute;inset:12% 7% 15% 9%;border-radius:48% 40% 42% 52%;background:linear-gradient(125deg,transparent 14%,#90b79b 15% 28%,transparent 29% 42%,#7ba88e 43% 60%,transparent 61%);opacity:.9;transform:rotate(-24deg)}.planet:after{content:"";position:absolute;width:22%;height:11%;left:20%;top:24%;background:#fff0d8;border-radius:50%;filter:blur(8px);opacity:.7}
+@keyframes planetFloat{50%{transform:translateY(-14px) rotate(4deg)}}.orbit{position:absolute;left:8%;top:38%;width:84%;height:29%;border:2px solid #f1d3d5aa;border-radius:50%;transform:rotate(-17deg);pointer-events:none;box-shadow:0 0 18px #f5b8c655}
+.moon{position:absolute;left:12%;top:16%;font-size:clamp(35px,6vw,60px);animation:moon 9s ease-in-out infinite}@keyframes moon{50%{transform:translate(22px,-15px) rotate(25deg)}}
+.cloud{position:absolute;font-size:clamp(40px,7vw,75px);filter:drop-shadow(0 12px 12px #1117);animation:cloud 7s ease-in-out infinite}.c1{left:3%;bottom:14%}.c2{right:4%;top:15%;animation-delay:-3s}.c3{right:17%;bottom:5%;font-size:42px;animation-delay:-2s}@keyframes cloud{50%{transform:translateY(-15px)}}
+.house{position:absolute;left:47%;top:16%;font-size:clamp(26px,4vw,45px);filter:drop-shadow(0 5px 4px #25324c55);animation:bob 4s infinite}
+.orbs{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}.orb{width:52px;height:52px;border-radius:50%;border:1px solid #ffffff55;background:#ffffff12;color:white;font-size:21px;transition:.25s}.orb:hover{transform:translateY(-7px) scale(1.1);background:var(--pink);color:#1b2034}
+#discover{background:linear-gradient(180deg,#19243b,#292746)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}.card{min-height:220px;border:1px solid #ffffff35;background:linear-gradient(145deg,#ffffff10,#ffffff04);padding:24px 18px;text-align:left;cursor:pointer;transition:.3s}.card:hover{transform:translateY(-7px);border-color:var(--pink);background:#ffffff14}.card .emoji{font-size:40px;display:block;margin-bottom:20px}.card small{font:9px var(--mono);letter-spacing:.13em;color:var(--pink)}.card h3{font:italic 24px var(--serif);font-weight:500;margin:9px 0}.card p{font-size:12px;line-height:1.7;color:#c5c6d7;margin:0}
+#memories{background:#efe4d4;color:#2b2a3d}#memories .eyebrow{color:#a55e78}#memories .lead{color:#625d70}.polaroids{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:32px auto 0;max-width:900px}.polaroid{background:#fffaf1;padding:9px 9px 30px;box-shadow:0 12px 30px #3a2e3a24;transform:rotate(var(--r));position:relative;transition:.3s}.polaroid:hover{transform:rotate(0) translateY(-8px);z-index:2}.photo{aspect-ratio:3/4;background:linear-gradient(145deg,#f1c5d1,#b9b5e1);display:grid;place-items:center;position:relative;overflow:hidden}.photo img{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.polaroid.loaded img{display:block}.polaroid.loaded .ph{display:none}.ph{text-align:center;color:#50415b;font:9px var(--mono);letter-spacing:.08em}.ph b{display:block;font:40px var(--serif);margin-bottom:8px}.polaroid input{display:none}.polaroid label{position:absolute;inset:0;cursor:pointer}.caption{position:absolute;bottom:7px;left:0;right:0;text-align:center;font:italic 12px var(--serif);color:#5b4b58}.uploadnote{font:9px var(--mono);letter-spacing:.1em;color:#766a7a;margin-top:18px}
+#letter{background:radial-gradient(ellipse at 50% 50%,#454064,#171d31 68%);text-align:center}.envelope{width:min(390px,82vw);height:260px;margin:34px auto 10px;position:relative;cursor:pointer;perspective:800px}.env{position:absolute;inset:35px 0 0;background:#e6a9bd;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);box-shadow:0 25px 60px #080e1e88}.env:before{content:"";position:absolute;inset:0;background:#f5cad1;clip-path:polygon(0 0,50% 60%,100% 0)}.seal{position:absolute;left:50%;top:105px;transform:translateX(-50%);width:54px;height:54px;border-radius:50%;background:#a64e70;color:#fff0dc;display:grid;place-items:center;font:22px var(--serif);z-index:3}.paper{position:absolute;left:6%;right:6%;bottom:28px;height:190px;background:#fff2dd;color:#3b3447;padding:20px;text-align:left;font:italic 14px/1.65 var(--serif);transform:translateY(90px);transition:1s;z-index:-1;box-shadow:0 12px 35px #090e1b66}.envelope.open .paper{transform:translateY(-110px);z-index:2}.envelope.open .seal{opacity:0;transition:.3s}
+#final{background:radial-gradient(ellipse at center,#4d456a,#181d32 72%);text-align:center}.heart{font-size:clamp(70px,12vw,120px);color:var(--pink);animation:heartbeat 1.4s infinite;display:block;margin-bottom:12px}@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.12)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+#modal{position:fixed;inset:0;background:#0c1222ed;z-index:60;display:none;place-items:center;padding:24px;text-align:center}#modal.show{display:grid}.modalbox{max-width:560px}.modalbox .symbol{font-size:58px}.modalbox h2{font:italic clamp(36px,7vw,65px) var(--serif);color:var(--pink)}.modalbox p{line-height:1.8;color:#d8d6e6}.close{margin-top:15px}
+footer{text-align:center;padding:25px;color:#a8a8c2;font:9px var(--mono);letter-spacing:.15em}
+@media(max-width:700px){.top{padding:13px 15px;font-size:8px}.world-stage{height:400px;min-height:0}.planet{width:66%;left:17%;top:23%}.orbit{left:2%;width:96%;top:42%}.house{left:45%;top:20%}.cards{grid-template-columns:1fr}.card{min-height:0;padding:20px}.card .emoji{margin-bottom:10px}.polaroids{grid-template-columns:repeat(2,1fr);gap:12px}.polaroid{padding:7px 7px 27px}section{padding:82px 18px}.lead{line-height:1.7}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="space"></div><div class="top"><span>✦ a little universe · made for one person</span><b>SUPPU / 001</b></div>
+<main id="app">
+<section id="intro"><div class="inner intro-content">
+ <div class="logo"><div class="ring"></div><div class="ring r2"></div><div class="mini-planet"></div><span class="planet-tag tag1">A WORLD OF HER OWN</span><span class="planet-tag tag2">EST. THE DAY YOU WERE BORN ✦</span></div>
+ <div class="eyebrow">A small planet, with a very big reason to celebrate</div>
+ <h1>A little planet<br>called <em>Suppu.</em></h1>
+ <p class="lead">Somewhere in the universe, there's a tiny world that exists just for you. It has floating clouds, secret surprises — and one very important birthday girl.</p>
+ <button class="btn" onclick="go('world')">Find your planet ✦</button>
+ </div><div class="scroll">SCROLL TO EXPLORE THE UNIVERSE ↓</div></section>
+<section id="world"><div class="inner">
+ <div class="eyebrow">Chapter 01 · Welcome to your own little world</div><h2>Look what the universe<br><em>made for you.</em></h2>
+ <p class="lead">A place where flowers grow in the sky, clouds have their own plans, and everything is a little more magical. Tap the little things floating around your planet.</p>
+ <div class="world-stage"><div class="moon">🌙</div><div class="cloud c1">☁️</div><div class="cloud c2">☁️</div><div class="cloud c3">☁️</div><div class="house">🏡</div><div class="orbit"></div><div class="planet" onclick="reveal('planet')"></div></div>
+ <div class="micro">THE PLANET HAS SECRETS · TAP TO DISCOVER</div><div class="orbs"><button class="orb" onclick="reveal('flower')">🌷</button><button class="orb" onclick="reveal('star')">⭐</button><button class="orb" onclick="reveal('cloud')">☁️</button><button class="orb" onclick="reveal('moon')">🌙</button><button class="orb" onclick="reveal('heart')">💗</button></div>
+ </div></section>
+<section id="discover"><div class="inner">
+ <div class="eyebrow">Chapter 02 · Things the universe knows</div><h2>Three tiny truths<br><em>about you.</em></h2><p class="lead">Not scientific. Not negotiable. Just facts according to your biggest fan.</p>
+ <div class="cards">
+ <article class="card" onclick="reveal('art')"><span class="emoji">🎨</span><small>OBSERVATION NO. 01</small><h3>Born to create</h3><p>Your mind turns ordinary things into something worth looking at twice. That's a superpower, artist.</p></article>
+ <article class="card" onclick="reveal('magic')"><span class="emoji">🪄</span><small>OBSERVATION NO. 02</small><h3>Certified magic</h3><p>You make random little moments feel special. Frankly, it's suspicious. We are investigating.</p></article>
+ <article class="card" onclick="reveal('chaos')"><span class="emoji">🍓</span><small>OBSERVATION NO. 03</small><h3>Beautiful chaos</h3><p>Equal parts sunshine, daydreams and “wait, I have an idea”. Never lose that wonderfully weird spark.</p></article>
+ </div></div></section>
+<section id="memories"><div class="inner">
+ <div class="eyebrow">Chapter 03 · Little windows into us</div><h2>Our own little<br><em>constellation.</em></h2><p class="lead">Every photo is a star. Add four of your favourite moments together and make this universe yours.</p>
+ <div class="polaroids">
+ <div class="polaroid" style="--r:-3deg"><div class="photo"><img alt="Memory 1"><div class="ph"><b>✧</b>ADD A PHOTO</div></div><label><input type="file" accept="image/*" onchange="addPhoto(event,this)"></label><div class="caption">a favourite day</div></div>
+ <div class="polaroid" style="--r:2deg"><div class="photo"><img alt="Memory 2"><div class="ph"><b>♡</b>ADD A PHOTO</div></div><label><input type="file" accept="image/*" onchange="addPhoto(event,this)"></label><div class="caption">that smile</div></div>
+ <div class="polaroid" style="--r:-2deg"><div class="photo"><img alt="Memory 3"><div class="ph"><b>☼</b>ADD A PHOTO</div></div><label><input type="file" accept="image/*" onchange="addPhoto(event,this)"></label><div class="caption">our kind of chaos</div></div>
+ <div class="polaroid" style="--r:3deg"><div class="photo"><img alt="Memory 4"><div class="ph"><b>✿</b>ADD A PHOTO</div></div><label><input type="file" accept="image/*" onchange="addPhoto(event,this)"></label><div class="caption">to be continued...</div></div>
+ </div><div class="uploadnote">TAP EACH FRAME TO CHOOSE A PHOTO · THESE LOCAL PREVIEWS ARE NOT SHARED</div>
+ </div></section>
+<section id="letter"><div class="inner">
+ <div class="eyebrow">Chapter 04 · A message from far away</div><h2>One little thing<br><em>I need you to know.</em></h2><p class="lead">Distance is annoying. So I made a tiny delivery system. Tap the envelope.</p>
+ <div class="envelope" onclick="this.classList.toggle('open');document.getElementById('envhint').textContent=this.classList.contains('open')?'DELIVERED WITH ALL MY LOVE ♡':'TAP TO OPEN YOUR LETTER'">
+ <div class="paper">My dearest Suppu,<br><br>Happy birthday, my favourite artist and my favourite human. I wish I could be beside you right now — laughing with you, stealing a bite of your cake and giving you the longest hug.<br><br>Until then, I hope this little world reminds you that someone, somewhere, is cheering for every dream you dream and every beautiful thing you create. Keep making the world more you. It is better that way.<br><br>I miss you. I love you. And your birthday hug is waiting for you, with interest. ❤️<br><br>— Your favourite pagal</div><div class="env"></div><div class="seal">S</div></div><div class="micro" id="envhint">TAP TO OPEN YOUR LETTER</div>
+ </div></section>
+<section id="final"><div class="inner"><span class="heart">♡</span><div class="eyebrow">The universe has one final announcement</div>
+ <h2>Happy birthday,<br><em>Supriya.</em></h2><p class="lead">May this year bring you beautiful ideas, new colours, unexpected adventures, soft mornings, loud laughter and every little thing your heart has been quietly wishing for.</p>
+ <button class="btn" onclick="celebrate()">Make a wish, birthday girl ✦</button><p id="endnote" class="micro" style="margin-top:24px"></p></div></section>
+<footer>MADE FOR SUPPU · FROM SOMEONE WHO WISHES HE COULD BE THERE RIGHT NOW ✦</footer>
+</main>
+<div id="modal"><div class="modalbox"><div class="symbol" id="msymbol">✦</div><div class="eyebrow">A little secret from your planet</div><h2 id="mtitle">The universe picked you.</h2><p id="mtext">You make everything a little more magical.</p><button class="btn ghost close" onclick="hide()">Back to my planet ↗</button></div></div>
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+const notes={
+ planet:['🪐','Planet Suppu','Population: one birthday queen. Gravity: powered entirely by your charm. Weather: 100% chance of being adorable.'],
+ flower:['🌷','A flower for you','May you keep growing in your own strange, wonderful direction. No garden has ever had your exact kind of magic.'],
+ star:['⭐','A little star','If every little thing you do was a star, the night sky would have to make room.'],
+ cloud:['☁️','Cloud delivery','This cloud travelled a very long way to tell you: you are missed. Also, it forgot the cake. Typical.'],
+ moon:['🌙','Moon thoughts','Even the moon looks a little less far away when I think of you. Happy birthday, Suppu.'],
+ heart:['💗','A heart, obviously','A whole universe and somehow my favourite place is still wherever you are.'],
+ art:['🎨','The artist effect','You notice beauty in details most people walk past. Keep looking closer. The world needs your eyes.'],
+ magic:['🪄','Unlicensed magician','You turn “nothing special” into a memory. No wand. No training. Extremely unfair to the rest of us.'],
+ chaos:['🍓','A very good kind of chaos','Your brain probably has 19 ideas, 4 songs and one random snack thought running at once. I adore it.']
+};
+function reveal(k){const m=notes[k];document.getElementById('msymbol').textContent=m[0];document.getElementById('mtitle').textContent=m[1];document.getElementById('mtext').textContent=m[2];document.getElementById('modal').classList.add('show')}
+function hide(){document.getElementById('modal').classList.remove('show')}
+function addPhoto(e,input){const f=e.target.files[0];if(!f)return;const box=input.closest('.polaroid');box.querySelector('img').src=URL.createObjectURL(f);box.classList.add('loaded')}
+function celebrate(){document.getElementById('endnote').textContent='Wish launched into the universe. A million virtual hugs are on their way. 💗';for(let i=0;i<100;i++){const el=document.createElement('span');el.textContent=['✦','♡','✿','✧','☼'][i%5];el.style.left=(Math.random()*100)+'vw';el.style.top='-25px';el.style.position='fixed';el.style.zIndex='70';el.style.pointerEvents='none';el.style.color=['#f5a9bb','#b8b4f0','#f4d18b','#a9d5c3'][i%4];el.style.fontSize=(14+Math.random()*24)+'px';el.style.animation='fall '+(3+Math.random()*3)+'s linear forwards';document.body.appendChild(el);setTimeout(()=>el.remove(),6500)}}
+const css=document.createElement('style');css.textContent='@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:0}}';document.head.appendChild(css);
+</script>
+</body></html>
